@@ -1,11 +1,11 @@
-function App() {
+import HeroSection from "./components/HeroSection";
+
+const App = () => {
   return (
     <>
-      <div>
-        <div className="text-white ">hello world</div>
-      </div>
+      <HeroSection />
     </>
   );
-}
+};
 
 export default App;
