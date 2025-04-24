@@ -4,6 +4,9 @@ import arrow from "../assets/arrow.svg";
 import { useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
 import confetti from "canvas-confetti";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 const HeroSection = () => {
@@ -95,21 +98,32 @@ const HeroSection = () => {
 
   return (
     <>
-      <div
-        className="w-full relative z-20  h-screen bg-[#000]"
-        // style={{ backgroundImage: `url(${bgBottom})` }}
-      >
+      <div className="w-full relative z-20  h-screen bg-[#000]">
         <div className="w-[1220px] pt-[50px] m-auto relative z-20 ">
           <div className="flex  justify-between items-center bg-[#000] text-white">
             <button className="cursor-pointer ">
               <img src={logo} alt="" />
             </button>
-            <button className="bg-[#fff] w-[142px] cursor-pointer py-3 px-4 rounded-[10px] text-black text-[15px] ">
-              Get Started
-            </button>
+
+            <div className="flex gap-4 items-center justify-between">
+              <a href="#">
+                <FaInstagram className="text-[30px]" />
+              </a>
+              <a href="#">
+     
+                <FaXTwitter className="text-[30px]" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/mimonihq"
+                target="_blank"
+              >
+       
+                <FaLinkedin className="text-[30px]" />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="flex relative z-20 flex-col justify-center border items-center text-center  h-[calc(100vh-130px)] w-full ">
+        <div className="flex relative z-20 flex-col justify-center border items-center text-center  h-[calc(100vh-160px)] w-full ">
           <p className="text-[15px] text-[#BABABA]  mb-2">
             🔥 Receive & Send money on your terms.
           </p>
@@ -141,7 +155,7 @@ const HeroSection = () => {
                   isFormInvalid ? "cursor-not-allowed" : "cursor-pointer"
                 }`}
               >
-                {isSubmitting ? "Submitting..." : "Get Started"}
+                {isSubmitting ? "Submitting..." : "Join Waitlist"}
               </button>
 
               <img
