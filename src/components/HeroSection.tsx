@@ -96,10 +96,10 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className="w-full  h-screen bg-[#000]"
-        style={{ backgroundImage: `url(${bgBottom})` }}
+        className="w-full relative z-20  h-screen bg-[#000]"
+        // style={{ backgroundImage: `url(${bgBottom})` }}
       >
-        <div className="w-[1220px] pt-[50px] m-auto ">
+        <div className="w-[1220px] pt-[50px] m-auto relative z-20 ">
           <div className="flex  justify-between items-center bg-[#000] text-white">
             <button className="cursor-pointer ">
               <img src={logo} alt="" />
@@ -109,7 +109,7 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col justify-center border items-center text-center  h-[calc(100vh-130px)] w-full ">
+        <div className="flex relative z-20 flex-col justify-center border items-center text-center  h-[calc(100vh-130px)] w-full ">
           <p className="text-[15px] text-[#BABABA]  mb-2">
             🔥 Receive & Send money on your terms.
           </p>
@@ -157,7 +157,11 @@ const HeroSection = () => {
             )}
           </form>
         </div>
-        {/* <img src={bgBottom} className="absolute bottom-0 z-10" alt="" /> */}
+        <img
+          src={bgBottom}
+          className="absolute bottom-0 left-0 w-full object-cover z-0"
+          alt=""
+        />
       </div>
       {showModal && (
         <div className="fixed inset-0 bg-black/90 bg-opacity-60 z-50 flex justify-center items-center">
