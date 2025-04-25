@@ -98,8 +98,9 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="w-full relative z-20  h-screen bg-[#000]">
-       <div>
+      <div className="w-full relative z-20 h-screen bg-[#000] overflow-hidden"
+      >
+       <div >
        <div className="w-full md:pt-[50px] pt-[20px] px-4 sm:px-6 md:px-8 lg:px-10 max-w-[1220px] mx-auto relative z-20">
           <div className="flex justify-between items-center bg-[#000] text-white">
             <button className="cursor-pointer">
@@ -127,7 +128,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex relative z-20 flex-col lg:mt-0 md:mt-[4rem] sm:mt-[4rem] mt-[2rem]   justify-center border items-center text-center  h-[calc(100vh-160px)] w-full ">
+        <div className="flex relative z-20 flex-col lg:mt-0 md:mt-[4rem] sm:mt-[4rem] mt-[2rem]   justify-center  items-center text-center  h-[calc(100vh-160px)] w-full ">
           <p className="text-[15px] text-[#BABABA]  mb-2">
             🔥 Receive & Send money on your terms.
           </p>
@@ -167,7 +168,7 @@ const HeroSection = () => {
                 </button>
 
                 <img
-                  className="hidden md:block absolute right-[-5rem] bottom-[0]"
+                  className="hidden md:block absolute right-[-5rem] bottom-[8px]"
                   src={arrow}
                   alt=""
                 />
@@ -180,11 +181,12 @@ const HeroSection = () => {
           </div>
         </div>
        </div>
-        <img
-          src={bgBottom}
-          className="absolute bottom-0 left-0 w-full object-cover z-0"
-          alt=""
-        />
+       <img
+  src={bgBottom}
+  className="absolute bottom-0 left-0 w-full h-auto object-cover z-0"
+  alt=""
+/>
+
       </div>
       {showModal && (
         <div className="fixed inset-0 bg-black/90 bg-opacity-60 z-50 flex justify-center items-center">
