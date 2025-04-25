@@ -99,78 +99,87 @@ const HeroSection = () => {
   return (
     <>
       <div className="w-full relative z-20  h-screen bg-[#000]">
-        <div className="w-[1220px] pt-[50px] m-auto relative z-20 ">
-          <div className="flex  justify-between items-center bg-[#000] text-white">
-            <button className="cursor-pointer ">
-              <img src={logo} alt="" />
+       <div>
+       <div className="w-full md:pt-[50px] pt-[20px] px-4 sm:px-6 md:px-8 lg:px-10 max-w-[1220px] mx-auto relative z-20">
+          <div className="flex justify-between items-center bg-[#000] text-white">
+            <button className="cursor-pointer">
+              <img
+                src={logo}
+                alt="Mimoni logo"
+                className="w-[120px] sm:w-[120px] md:w-[150px]  h-auto object-contain"
+              />
             </button>
 
             <div className="flex gap-4 items-center justify-between">
-              <a href="#">
-                <FaInstagram className="text-[30px]" />
+              <a href="https://instagram.com/mimonihq" target="_blank">
+                <FaInstagram className="text-[20px] sm:text-[25px]" />
               </a>
-              <a href="#">
-     
-                <FaXTwitter className="text-[30px]" />
+              <a href="https://x.com/mimonihq" target="_blank">
+                <FaXTwitter className="text-[20px] sm:text-[25px]" />
               </a>
               <a
                 href="https://www.linkedin.com/company/mimonihq"
                 target="_blank"
               >
-       
-                <FaLinkedin className="text-[30px]" />
+                <FaLinkedin className="text-[20px] sm:text-[25px]" />
               </a>
             </div>
           </div>
         </div>
-        <div className="flex relative z-20 flex-col justify-center border items-center text-center  h-[calc(100vh-160px)] w-full ">
+
+        <div className="flex relative z-20 flex-col lg:mt-0 md:mt-[4rem] sm:mt-[4rem] mt-[2rem]   justify-center border items-center text-center  h-[calc(100vh-160px)] w-full ">
           <p className="text-[15px] text-[#BABABA]  mb-2">
             🔥 Receive & Send money on your terms.
           </p>
-          <h1 className="text-transparent bg-clip-text leading-[4.5rem] bg-gradient-to-r from-white to-[#8A8A8A] text-[59px] font-[700]">
+          <h1 className="text-transparent bg-clip-text  md:leading-[3.4rem] lg:leading-[4.5rem]  bg-gradient-to-r from-white to-[#8A8A8A] lg:text-[59px]  md:text-[49px] sm:text-[40px] text-[39px] font-[700]">
             Join The Waitlist for <br /> Mimoni Today!
           </h1>
-          <p className="text-[15px] text-[#BABABA] w-[45%] ">
+          <p className="text-[15px] text-[#BABABA] lg:w-[45%] md:w-[60%] w-[90%] ">
             We believe everyone has the right to when and how they want to send
             or receive money, so we built Mimoni, a platform that allows you to
             send or receive money on your own terms.
           </p>
 
-          <form onSubmit={handleSubmit} className="w-[40%] relative mt-8 ">
-            <div className="flex justify-between items-center w-full gap-2 ">
-              <input
-                type="email"
-                placeholder="Your email address"
-                name="recipient"
-                value={formData.recipient}
-                onChange={handleChange}
-                className={`p-[11px] pl-5 pr-3 border text-[#BABABA] placeholder-[#BABABA] text-[15px] bg-[#59595999] border-[#59595999] w-full outline-none rounded-[10px] ${
-                  errors.recipient ? "border-red-500" : ""
-                }`}
-              />
+          <div className="w-full flex items-center md:mt-[1rem] lg:mt-0 mt-[3rem] justify-center   ">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full sm:w-[90%] md:px-0 px-2  md:w-[55%] lg:w-[40%] relative mt-8"
+            >
+              <div className="flex flex-col sm:flex-col  lg:flex-row justify-between items-center w-full gap-4 lg:gap-2">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  name="recipient"
+                  value={formData.recipient}
+                  onChange={handleChange}
+                  className={`p-[11px] pl-5 pr-3 border text-[#BABABA] placeholder-[#BABABA] text-[15px] bg-[#59595999] border-[#59595999] w-full outline-none rounded-[10px] ${
+                    errors.recipient ? "border-red-500" : ""
+                  }`}
+                />
 
-              <button
-                disabled={isFormInvalid}
-                className={`bg-[#fff] w-[27%] py-[11px] px-4 rounded-[10px] text-black text-[15px] ${
-                  isFormInvalid ? "cursor-not-allowed" : "cursor-pointer"
-                }`}
-              >
-                {isSubmitting ? "Submitting..." : "Join Waitlist"}
-              </button>
+                <button
+                  disabled={isFormInvalid}
+                  className={`bg-[#fff] min-w-[140px] w-full   lg:w-[27%] py-[11px] px-4 rounded-[10px] text-black text-[15px] whitespace-nowrap ${
+                    isFormInvalid ? "cursor-not-allowed" : "cursor-pointer"
+                  }`}
+                >
+                  {isSubmitting ? "Submitting..." : "Join Waitlist"}
+                </button>
 
-              <img
-                className="absolute right-[-5rem] bottom-[8px] "
-                src={arrow}
-                alt=""
-              />
-            </div>
-            {backendError && (
-              <p className="text-red-500 ml-[-18.5rem] text-sm mt-1">
-                {backendError}
-              </p>
-            )}
-          </form>
+                <img
+                  className="hidden md:block absolute right-[-5rem] bottom-[0]"
+                  src={arrow}
+                  alt=""
+                />
+              </div>
+
+              {backendError && (
+                <p className="text-red-500 text-sm mt-1">{backendError}</p>
+              )}
+            </form>
+          </div>
         </div>
+       </div>
         <img
           src={bgBottom}
           className="absolute bottom-0 left-0 w-full object-cover z-0"
@@ -179,7 +188,7 @@ const HeroSection = () => {
       </div>
       {showModal && (
         <div className="fixed inset-0 bg-black/90 bg-opacity-60 z-50 flex justify-center items-center">
-          <div className="bg-[#797575]/40 backdrop-blur-sm p-8 rounded-lg text-center max-w-md shadow-lg">
+          <div className="bg-[#797575]/40 backdrop-blur-sm p-8 rounded-lg text-center md:max-w-md max-w-[400px] shadow-lg">
             <div className="flex items-center justify-center ">
               <span className="text-[30px] mb-4">🎉</span>
               <h2 className="text-[30px] font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-white to-[#8A8A8A]">
