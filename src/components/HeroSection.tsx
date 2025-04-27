@@ -101,7 +101,7 @@ const HeroSection = () => {
       <div className="w-full relative z-20 h-screen bg-[#000] overflow-hidden"
       >
        <div >
-       <div className="w-full md:pt-[50px] pt-[20px] px-4 sm:px-6 md:px-8 lg:px-10 max-w-[1220px] mx-auto relative z-20">
+       <div className="w-full md:pt-[50px] pt-[30px] px-4 sm:px-6 md:px-8 lg:px-10 max-w-[1220px] mx-auto relative z-20">
           <div className="flex justify-between items-center bg-[#000] text-white">
             <button className="cursor-pointer">
               <img
@@ -128,23 +128,23 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex relative z-20 flex-col lg:mt-0 md:mt-[4rem] sm:mt-[4rem] mt-[2rem]   justify-center  items-center text-center  h-[calc(100vh-160px)] w-full ">
+        <div className="flex relative z-20 flex-col   justify-center  items-center text-center  h-[calc(100vh-100px)] md:h-[calc(100vh-160px)] w-full ">
           <p className="text-[15px] text-[#BABABA]  mb-2">
             🔥 Receive & Send money on your terms.
           </p>
-          <h1 className="text-transparent bg-clip-text  md:leading-[3.4rem] lg:leading-[4.5rem]  bg-gradient-to-r from-white to-[#8A8A8A] lg:text-[59px]  md:text-[49px] sm:text-[40px] text-[39px] font-[700]">
+          <h1 className="text-transparent bg-clip-text  md:leading-[3.4rem] leading-[2.5rem] lg:leading-[4.5rem]  bg-gradient-to-r from-white to-[#8A8A8A] lg:text-[59px]  md:text-[49px] sm:text-[35px] text-[30px] font-[700]">
             Join The Waitlist for <br /> Mimoni Today!
           </h1>
-          <p className="text-[15px] text-[#BABABA] lg:w-[45%] md:w-[60%] w-[90%] ">
+          <p className="text-[15px] text-[#BABABA] lg:w-[45%] md:w-[60%] w-full px-[10px] md:px-0 ">
             We believe everyone has the right to when and how they want to send
             or receive money, so we built Mimoni, a platform that allows you to
             send or receive money on your own terms.
           </p>
 
-          <div className="w-full flex items-center md:mt-[1rem] lg:mt-0 mt-[3rem] justify-center   ">
+          <div className="w-full flex items-center md:mt-[1rem] lg:mt-0  justify-center   ">
             <form
               onSubmit={handleSubmit}
-              className="w-full sm:w-[90%] md:px-0 px-2  md:w-[55%] lg:w-[40%] relative mt-8"
+              className="w-full  px-[15px]  md:w-[55%] lg:w-[40%] relative mt-8"
             >
               <div className="flex flex-col sm:flex-col  lg:flex-row justify-between items-center w-full gap-4 lg:gap-2">
                 <input
